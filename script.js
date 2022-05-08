@@ -21,6 +21,7 @@ function render(){
         let li = document.createElement('li');
         let pEmail = document.createElement('p');
         pEmail.textContent = Element.email;
+        pEmail.classList.add('p-Email');
         let userImg = document.createElement('img');
         userImg.classList.add('user-img');
         userImg.src = Element.avatar;
