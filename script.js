@@ -37,11 +37,17 @@ function render(){
 
 }
 
-function errorRender(){
-    let ptext = document.createElement('p');
-    ptext.textContent = 'Server Error';
-    ptext.classList.add('p-text');
-    document.getElementById('user_div').appendChild(ptext);
+function errorRender(error){
+    if(error == 404){
+        let ptext = document.createElement('p');
+        ptext.textContent = 'Server Error';
+        ptext.classList.add('p-text');
+        document.getElementById('user_div').appendChild(ptext);
+    }
+    let perror = document.createElement('p');
+    perror.textContent = 'Page Is Not Found';
+    perror.classList.add('p-text');
+    document.getElementById('user_div').appendChild(perror);
 }
 
 document.getElementById('next').addEventListener('click' , function() {
